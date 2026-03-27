@@ -29,33 +29,52 @@ title: J. Nezval
 
 <div class='card'>
   <div class='card__image'>
-      <img class='image' src='{{ site.data.my.image }}'/>
+    <img class='image' src='{{ site.data.my.image }}'/>
   </div>
   <div class='card__content'>
-    <div class='card-content__name-age'>
-      <div class='name__name'>
+
+    <div class='card-content__name-age name-age'>
+      <div class='name-age__name'>
         {{site.data.my.degree}}
         {{site.data.my.name}}
         {{site.data.my.surname}}
       </div>
-      <div class='name__age'><span id='age'>_</span> years</div>
+      <div class='name-age__age'>
+        <span id='age'>_</span> years
+      </div>
     </div>
 
-
-    <div class='card__tldr'>
-      <div>{{ site.data.my.role }}</div>
-      <div>{{ site.data.my.organization }}</div>
-      <div>
+    <div class='card-content__bullets bullet-list'>
+      <div class='bullet-list__bullet'>
+        <i class="fa-solid fa-user"></i>
+        {{ site.data.my.role }}
+      </div>
+      <div class='bullet-list__bullet'>
+        <i class="fa-solid fa-building"></i>
+        {{ site.data.my.organization }}
+      </div>
+      <div class='bullet-list__bullet'>
+        <i class="fa-solid fa-location-dot"></i>
         {{ site.data.my.location.city }},
         {{ site.data.my.location.country }}
       </div>
     </div>
-    <div class='card__body'>
-      Quick summary about me.
+
+    <div class='card-content__elevator-pitch'>
+      Elevator pitch here.
     </div>
-    <div class='card__buttons'>
-      <div>GitHub</div>
-      <div>GitLab</div>
+
+    <div class='card-content__links'>
+      <div class='link-buttons'>
+        {% for socialLink in site.data.my.links %}
+          <div class='link-buttons__button'>
+            <div class='center link-button__button-body'>
+              <i class='{{ socialLink[1].icon }} fa-lg'></i>
+              <span>{{ socialLink[0] }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
 
   </div>

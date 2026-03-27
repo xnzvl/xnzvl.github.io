@@ -11,3 +11,17 @@ location:
   city: Brno
 
 image: assets/images/notRenderable.png
+
+links:
+  Personal Page:
+    link: _
+    icon: fa-solid fa-house-chimney-user
+  LinkedIn:
+    link: _
+    icon: fa-brands fa-linkedin
+  Mastodon:
+    link: _
+    icon: fa-brands fa-mastodon
+  GitHub:
+    link: _
+    icon: fa-brands fa-github
