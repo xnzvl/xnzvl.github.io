@@ -1,0 +1,43 @@
+@import "center";
+
+$gap_m: 10px;
+
+$space_s: 15px;
+$space_m: 30px;
+$space_l: 45px;
+
+$image_side: 70px;
+$image-card_overlap: 20px;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.card {
+  // something?
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+  height: $image_side - $image-card_overlap;
+}
+
+.card__content {
+  background-color: mediumaquamarine;
+  display: flex;
+  flex-direction: column;
+  padding: $space_m $space_s;
+  gap: $gap_m;
+}
+
+.image {
+  height: $image_side;
+  width: $image_side;
+}
+
+.card-content__name-age {
+  display: flex;
+  justify-content: space-between;
+}

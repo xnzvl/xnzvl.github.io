@@ -1,6 +1,62 @@
 ---
-layout: default
+layout: card
 title: J. Nezval
 ---
 
-BUSINESS CARD
+<script>
+  /**
+   * @param {string} birthDateString YYYY-MM-DD birthday string
+   */
+  function computeAge(birthDateString) {
+    const today = new Date();
+    const birthDate = new Date(birthDateString);
+
+    const years  = today.getFullYear() - birthDate.getFullYear();
+    const months = today.getMonth()    - birthDate.getMonth();
+    const days   = today.getDate()     - birthDate.getDate();
+
+    const had_birthday = months < 0 || (months == 0 && days < 0);
+
+    return had_birthday ? years - 1 : years;
+  }
+
+  function setAge() {
+    document.getElementById('age').innerHTML = computeAge('{{site.data.my.birthdate}}');
+  }
+
+  window.addEventListener('load', setAge);
+</script>
+
+<div class='card'>
+  <div class='card__image'>
+      <img class='image' src='{{ site.data.my.image }}'/>
+  </div>
+  <div class='card__content'>
+    <div class='card-content__name-age'>
+      <div class='name__name'>
+        {{site.data.my.degree}}
+        {{site.data.my.name}}
+        {{site.data.my.surname}}
+      </div>
+      <div class='name__age'><span id='age'>_</span> years</div>
+    </div>
+
+
+    <div class='card__tldr'>
+      <div>{{ site.data.my.role }}</div>
+      <div>{{ site.data.my.organization }}</div>
+      <div>
+        {{ site.data.my.location.city }},
+        {{ site.data.my.location.country }}
+      </div>
+    </div>
+    <div class='card__body'>
+      Quick summary about me.
+    </div>
+    <div class='card__buttons'>
+      <div>GitHub</div>
+      <div>GitLab</div>
+    </div>
+
+  </div>
+</div>

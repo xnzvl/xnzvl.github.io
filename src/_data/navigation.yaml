@@ -4,8 +4,8 @@
 - name: About Me
   link: /about_me.html
 
-- name: Notes
-  link: /notes.html
-
 - name: Business Card
   link: /business_card.html
+
+- name: Notes
+  link: /notes.html
