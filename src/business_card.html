@@ -27,55 +27,40 @@ title: J. Nezval
   window.addEventListener('load', setAge);
 </script>
 
-<div class='card'>
-  <div class='card__image'>
-    <img class='image' src='{{ site.data.my.image }}'/>
+<div class="card">
+  <div class="card__head">
+    <div class="spread">
+      <span>{{ site.data.my.degree }} {{ site.data.my.name }} {{ site.data.my.surname }}</span>
+      <span><span id="age">_</span> years</span>
+    </div>
+    <div class="spread">
+      <span>^^^^^^^^^^^^^^^^</span>
+      <span>he/him</span>
+    </div>
+    <span class="whiteful">====================================</span>
   </div>
-  <div class='card__content'>
 
-    <div class='card-content__name-age name-age'>
-      <div class='name-age__name'>
-        {{site.data.my.degree}}
-        {{site.data.my.name}}
-        {{site.data.my.surname}}
-      </div>
-      <div class='name-age__age'>
-        <span id='age'>_</span> years
-      </div>
+  <div class="card__info tldr">
+    <div class="tldr__entry">
+      | {{ site.data.my.role }}
     </div>
-
-    <div class='card-content__bullets bullet-list'>
-      <div class='bullet-list__bullet'>
-        <i class="fa-solid fa-user"></i>
-        {{ site.data.my.role }}
-      </div>
-      <div class='bullet-list__bullet'>
-        <i class="fa-solid fa-building"></i>
-        {{ site.data.my.organization }}
-      </div>
-      <div class='bullet-list__bullet'>
-        <i class="fa-solid fa-location-dot"></i>
-        {{ site.data.my.location.city }},
-        {{ site.data.my.location.country }}
-      </div>
+    <div class="tldr__entry">
+      | {{ site.data.my.organization }}
     </div>
-
-    <div class='card-content__elevator-pitch'>
-      Elevator pitch here.
+    <div class="tldr__entry">
+      | {{ site.data.my.location.city }}, {{ site.data.my.location.country }}
     </div>
+  </div>
 
-    <div class='card-content__links'>
-      <div class='link-buttons'>
-        {% for socialLink in site.data.my.links %}
-          <div class='link-buttons__button'>
-            <div class='center link-button__button-body'>
-              <i class='{{ socialLink[1].icon }} fa-lg'></i>
-              <span>{{ socialLink[0] }}</span>
-            </div>
-          </div>
-        {% endfor %}
+  <div class="card__elevator-pitch">
+    Elevator pitch.
+  </div>
+
+  <div class="card__links links">
+    {% for link in site.data.my.links %}
+      <div class="links__button">
+        > {{ link[0] }}
       </div>
-    </div>
-
+    {% endfor %}
   </div>
 </div>
