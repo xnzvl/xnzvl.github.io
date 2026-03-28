@@ -1,16 +1,20 @@
 @import "center";
 
-$gap_xs: 2px;
-$gap_s: 5px;
-$gap_m: 10px;
-$gap_l: 20px;
+$unit_xs: 2px;
+$unit_s: 5px;
+$unit_m: 10px;
+$unit_l: 15px;
 
-$space_s: 15px;
-$space_m: 30px;
-$space_l: 45px;
+$background_color: mediumaquamarine;
 
-$image_side: 70px;
+$card_top: 40px;
+
+$image_side: 125px;
 $image-card_overlap: 20px;
+$image-border_width: 5px;
+
+$round_corner_button: 15px;
+$round_corner_card: $round_corner_button + $unit_l;
 
 html, body {
   height: 100%;
@@ -28,29 +32,32 @@ html, body {
 }
 
 .card__content {
-  background-color: mediumaquamarine;
+  background-color: $background_color;
   display: flex;
   flex-direction: column;
-  padding: $space_m $space_s;
-  gap: $gap_m;
+  padding: $card_top $unit_l $unit_l $unit_l;
+  gap: $unit_m;
+  border-radius: 0 0 $round_corner_card $round_corner_card;
 }
 
 .image {
   height: $image_side;
   width: $image_side;
+  border-radius: $unit_m;
+  border: $image-border_width solid aquamarine;
 }
 
 .card-content__name-age {
   border-bottom: 1px solid black;
-  padding-bottom: $gap_m;
-  margin-bottom: $gap_s;
+  padding-bottom: $unit_m;
+  margin-bottom: $unit_s;
 }
 
 .name-age {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: $gap_m;
+  gap: $unit_m;
 }
 
 .name-age__name {
@@ -63,43 +70,48 @@ html, body {
 }
 
 .card-content__bullets {
-  margin: 0 $gap_m;
+  margin: 0 $unit_m;
   border-left: 2px solid black;
-  padding: 0 $gap_m;
+  padding: 0 $unit_m;
 }
 
 .bullet-list {
   display: flex;
   flex-direction: column;
-  gap: $gap_xs;
+  gap: $unit_xs;
 }
 
 .bullet-list__bullet {
   display: flex;
-  gap: $gap_m;
+  gap: $unit_m;
   align-items: center;
 }
 
 .card-content__elevator-pitch {
-
+  padding: 0 $unit_m;
 }
 
 .card-content__links {
-  margin-top: 15px;
+  margin-top: $unit_l;
 }
 
 .link-buttons {
   display: flex;
   flex-direction: column;
-  gap: $gap_m;
+  gap: $unit_m;
 }
 
 .link-buttons__button {
   background-color: aquamarine;
-  padding: $space_s;
+  padding: $unit_l;
+  border-radius: $unit_s;
+}
+
+.link-buttons__button:last-child {
+  border-radius: $unit_s $unit_s $round_corner_button $round_corner_button;
 }
 
 .link-button__button-body {
   display: inline-flex;
-  gap: $gap_s;
+  gap: $unit_s;
 }
