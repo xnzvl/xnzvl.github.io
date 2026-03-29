@@ -107,7 +107,7 @@ html, body {
 
   gap: $unit_half;
   padding: $unit_half $unit;
-  border-left: 1px dotted black;
+  border-left: 2px dotted rgba(0, 0, 0, 0.75);
 
   .info-block__entry {
 
