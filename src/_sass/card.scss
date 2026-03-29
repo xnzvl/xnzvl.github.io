@@ -26,9 +26,17 @@ html, body {
   background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Dirt_%28texture%29_JE2_BE2.png");
 }
 
+.translucent {
+  // background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: $blur;
+  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
 .card {
+  padding: $units_4 0;
+
   .card__image {
-    padding-top: $units_4;
+
   }
 
   .card__content {
@@ -38,9 +46,6 @@ html, body {
     flex-direction: column;
     gap: $units_2;
 
-    // background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: $blur;
-    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     width: $width;
   }
 }
@@ -81,7 +86,7 @@ html, body {
   }
 
   .content__links {
-    padding: 0 $units_4;
+    padding: $units_2 $units_4 0 $units_4;
   }
 }
 
@@ -117,7 +122,11 @@ html, body {
   font-size: $font-size_links;
 
   .links__button {
-    background-color: lightgray;
+    background-color: rgba(0, 0, 0, 0.1);
     padding: $units_2;
+  }
+
+  .links__button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
