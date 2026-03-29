@@ -27,40 +27,57 @@ title: J. Nezval
   window.addEventListener('load', setAge);
 </script>
 
-<div class="card">
-  <div class="card__head">
-    <div class="spread">
-      <span>{{ site.data.my.degree }} {{ site.data.my.name }} {{ site.data.my.surname }}</span>
-      <span><span id="age">_</span> years</span>
-    </div>
-    <div class="spread">
-      <span>^^^^^^^^^^^^^^^^</span>
-      <span>he/him</span>
-    </div>
-    <span class="whiteful">====================================</span>
+<div class="card google-sans-normal">
+  <div class="card__image image">
+    <div class="image__space-filler"></div>
+    <img class="image__src" src="{{ site.data.my.image }}" />
   </div>
 
-  <div class="card__info tldr">
-    <div class="tldr__entry">
-      | {{ site.data.my.role }}
-    </div>
-    <div class="tldr__entry">
-      | {{ site.data.my.organization }}
-    </div>
-    <div class="tldr__entry">
-      | {{ site.data.my.location.city }}, {{ site.data.my.location.country }}
-    </div>
-  </div>
-
-  <div class="card__elevator-pitch">
-    Elevator pitch.
-  </div>
-
-  <div class="card__links links">
-    {% for link in site.data.my.links %}
-      <div class="links__button">
-        > {{ link[0] }}
+  <div class="card__content content">
+    <div class="content__title title">
+      <div class="title__primary">
+        {{ site.data.my.degree }}
+        {{ site.data.my.name }}
+        {{ site.data.my.surname }}
       </div>
-    {% endfor %}
+      <div class="title__secondary">
+        <span id="age">_</span> years, {{ site.data.my.pronouns }}
+      </div>
+    </div>
+
+    <div class="content__info-block info-block">
+      <div class="info-block__entry">
+        <i class="fa-solid fa-user"></i>
+        {{ site.data.my.role }}
+      </div>
+      <div class="info-block__entry">
+        <i class="fa-solid fa-building"></i>
+        {{ site.data.my.organization }}
+      </div>
+      <div class="info-block__entry">
+        <i class="fa-solid fa-location-dot"></i>
+        {{ site.data.my.location.city }}, {{ site.data.my.location.country }}
+      </div>
+    </div>
+
+    <div class="content__text elevator-pitch">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      In luctus euismod dapibus. Sed efficitur lobortis faucibus.
+      Nam finibus erat quis dictum dignissim.
+      Praesent euismod, augue quis tempus mattis, metus arcu congue magna, ac pretium lorem ante ut mi.
+      Integer eu lobortis turpis.
+      Vestibulum sit amet aliquam turpis, sit amet ultricies lorem.
+      Praesent metus justo, ornare at magna non, ornare tristique massa.
+      Etiam at enim sit amet nulla bibendum rutrum ac sit amet ex.
+    </div>
+
+    <div class="content__links links">
+      {% for link in site.data.my.links %}
+        <div class="links__button">
+          <i class="{{ link[1].icon }}"></i>
+          {{ link[0] }}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

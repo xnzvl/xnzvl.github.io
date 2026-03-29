@@ -1,6 +1,7 @@
 name: Jakub
 surname: Nezval
 birthdate: 2001-09-20
+pronouns: he/him
 
 degree: Bc.
 
@@ -14,14 +15,14 @@ image: assets/images/notRenderable.png
 
 links:
   Personal Page:
-    link: _
     icon: fa-solid fa-house-chimney-user
+    link: 
   LinkedIn:
-    link: _
     icon: fa-brands fa-linkedin
+    link: 
   Mastodon:
-    link: _
     icon: fa-brands fa-mastodon
+    link:
   GitHub:
-    link: _
     icon: fa-brands fa-github
+    link: 

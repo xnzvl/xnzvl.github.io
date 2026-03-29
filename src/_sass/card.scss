@@ -1,0 +1,113 @@
+@import "center";
+@import "font";
+
+$width: 80vw;  // TODO: make responsive
+
+$unit: 8px;
+$units_2: calc(2 * $unit);
+$units_4: calc(4 * $unit);
+$units_6: calc(6 * $unit);
+
+$image_size: 128px;
+$image-card_overlap: 32px;
+
+html, body {
+  margin: 0;
+  width: 100vw;
+  background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Dirt_%28texture%29_JE2_BE2.png");
+}
+
+.card {
+  .card__image {
+    padding-top: 32px;
+  }
+
+  .card__content {
+    padding: 16px 16px 48px 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    // background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: $width;
+  }
+}
+
+.image {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .image__space-filler {
+    height: 32px;
+  }
+
+  .image__src {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+  }
+}
+
+.content {
+  .content__title {
+    padding: 8px 16px 8px 16px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .content__info-block {
+    font-size: 1.2em;
+    margin: 0 32px;
+  }
+
+  .content__text {
+    padding: 0 16px;
+  }
+
+  .content__links {
+    padding: 0 32px;
+  }
+}
+
+.title {
+  .title__primary {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .title__secondary {
+    font-size: 1.4em;
+  }
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+  padding: 4px 8px;
+  border-left: 1px dotted black;
+
+  .info-block__entry {
+
+  }
+}
+
+.elevator-pitch {
+  font-size: 1.1em;
+}
+
+.links {
+  font-size: 1.2em;
+
+  .links__button {
+    background-color: lightgray;
+    padding: 16px;
+  }
+}
