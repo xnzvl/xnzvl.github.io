@@ -3,13 +3,22 @@
 
 $width: 80vw;  // TODO: make responsive
 
-$unit: 8px;
-$units_2: calc(2 * $unit);
-$units_4: calc(4 * $unit);
-$units_6: calc(6 * $unit);
+$unit_half: 4px;
+$unit: calc(2 * #{$unit_half});
+$units_2: calc(2 * #{$unit});
+$units_4: calc(4 * #{$unit});
+$units_6: calc(6 * #{$unit});
 
-$image_size: 128px;
-$image-card_overlap: 32px;
+$blur: blur(#{$unit});
+
+$image_size: calc(32 * #{$unit});
+$image-card_overlap: $units_4;
+
+$font-size_info-block: 1.2em;
+$font-size_title_primary: 2.5em;
+$font-size_title_secondary: 1.4em;
+$font-size_elevator_pitch: 1.1em;
+$font-size_links: 1.2em;
 
 html, body {
   margin: 0;
@@ -19,18 +28,18 @@ html, body {
 
 .card {
   .card__image {
-    padding-top: 32px;
+    padding-top: $units_4;
   }
 
   .card__content {
-    padding: 16px 16px 48px 16px;
+    padding: $units_6 $units_2 $units_6 $units_2;
 
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: $units_2;
 
     // background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(8px);
+    backdrop-filter: $blur;
     // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     width: $width;
   }
@@ -44,45 +53,46 @@ html, body {
   align-items: center;
 
   .image__space-filler {
-    height: 32px;
+    height: calc(#{$image_size} - #{$image-card_overlap});
   }
 
   .image__src {
     position: absolute;
-    width: 128px;
-    height: 128px;
+    z-index: 1;
+    width: $image_size;
+    height: $image_size;
   }
 }
 
 .content {
   .content__title {
-    padding: 8px 16px 8px 16px;
+    padding: $unit $units_2 $unit $units_2;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
   }
 
   .content__info-block {
-    font-size: 1.2em;
-    margin: 0 32px;
+    font-size: $font-size_info-block;
+    margin: 0 $units_4;
   }
 
   .content__text {
-    padding: 0 16px;
+    padding: 0 $units_2;
   }
 
   .content__links {
-    padding: 0 32px;
+    padding: 0 $units_4;
   }
 }
 
 .title {
   .title__primary {
-    font-size: 2.5em;
+    font-size: $font-size_title_primary;
     font-weight: bold;
   }
   
   .title__secondary {
-    font-size: 1.4em;
+    font-size: $font-size_title_secondary;
   }
 }
 
@@ -90,8 +100,8 @@ html, body {
   display: flex;
   flex-direction: column;
 
-  gap: 4px;
-  padding: 4px 8px;
+  gap: $unit_half;
+  padding: $unit_half $unit;
   border-left: 1px dotted black;
 
   .info-block__entry {
@@ -100,14 +110,14 @@ html, body {
 }
 
 .elevator-pitch {
-  font-size: 1.1em;
+  font-size: $font-size_elevator_pitch;
 }
 
 .links {
-  font-size: 1.2em;
+  font-size: $font-size_links;
 
   .links__button {
     background-color: lightgray;
-    padding: 16px;
+    padding: $units_2;
   }
 }
