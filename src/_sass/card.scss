@@ -122,11 +122,31 @@ html, body {
   font-size: $font-size_links;
 
   .links__button {
+    position: relative;
     background-color: rgba(0, 0, 0, 0.1);
     padding: $units_2;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .links__button * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .links__button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: $unit_half;
+    transition: all 0.5s ease-in-out;
   }
 
   .links__button:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    padding-left: 48px;
+  }
+
+  .links__button:hover::before {
+    width: 100%;
   }
 }
