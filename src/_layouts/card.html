@@ -1,12 +1,15 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>{{ page.title }}</title>
-    <link rel='stylesheet' href='/assets/css/card.css'/>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css' integrity='sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==' crossorigin='anonymous' referrerpolicy='no-referrer'/>
-  </head>
-  <body class='center'>
-    {{ content }}
-  </body>
-</html>
+---
+layout: plain
+stylesheets:
+  - href: /assets/css/card.css
+  - href: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css
+    integrity: sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==
+    crossorigin: anonymous
+    referrerpolicy: no-referrer
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js
+  - https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js
+---
+
+{{ content }}
+

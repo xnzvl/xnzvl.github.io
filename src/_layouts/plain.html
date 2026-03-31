@@ -3,7 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    {% for script in layout.scripts %}
+      <script src="{{ script }}"></script>
+    {% endfor %}
+    {% for stylesheet in layout.stylesheets %}
+      <link
+        rel="stylesheet"
+        {% for attribute in stylesheet %}
+          {{ attribute[0] }}={{ attribute[1] }}
+        {% endfor %}
+      >
+    {% endfor %}
   </head>
   <body>
     {{ content }}
