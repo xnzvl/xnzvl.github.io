@@ -23,11 +23,16 @@ $font-size_links: 1.2em;
 html, body {
   margin: 0;
   width: 100vw;
-  background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Dirt_%28texture%29_JE2_BE2.png");
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
 }
 
 .translucent {
-  // background: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.25);
   backdrop-filter: $blur;
   // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
