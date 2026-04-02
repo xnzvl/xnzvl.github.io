@@ -152,4 +152,8 @@ html, body {
   .links__button:hover::before {
     width: 100%;
   }
+
+  .links__button i {
+    padding-right: $unit_half;
+  }
 }
