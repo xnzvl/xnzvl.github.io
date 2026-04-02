@@ -116,7 +116,7 @@ html, body {
   border-left: 2px dotted rgba(0, 0, 0, 0.75);
 
   .info-block__entry {
-
+    font-weight: 600;
   }
 }
 
@@ -129,6 +129,7 @@ html, body {
 
   .links__button {
     position: relative;
+    font-weight: 500;
     background-color: rgba(0, 0, 0, 0.1);
     padding: $units_2;
     transition: all .2s ease-out;
@@ -147,6 +148,7 @@ html, body {
 
   .links__button:hover {
     padding-left: 48px;
+    font-style: oblique;
   }
 
   .links__button:hover::before {
