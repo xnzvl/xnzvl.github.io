@@ -23,6 +23,7 @@ $font-size_links: 1.2em;
 html, body {
   margin: 0;
   width: 100vw;
+  cursor: default;
 }
 
 .background {
@@ -131,6 +132,7 @@ html, body {
     background-color: rgba(0, 0, 0, 0.1);
     padding: $units_2;
     transition: all .2s ease-in-out;
+    cursor: pointer;
   }
 
   .links__button * {

@@ -14,15 +14,15 @@ location:
 image: assets/images/notRenderable.png
 
 links:
-  Personal Page:
+  - name: Personal Page
     icon: fa-solid fa-house-chimney-user
-    link: 
-  LinkedIn:
+    url: 
+  - name: LinkedIn
     icon: fa-brands fa-linkedin
-    link: 
-  Mastodon:
+    url: 
+  - name: Mastodon
     icon: fa-brands fa-mastodon
-    link:
-  GitHub:
+    url: https://mastodon.social/@nrvsOne
+  - name: GitHub
     icon: fa-brands fa-github
-    link: 
+    url: https://github.com/xnzvl

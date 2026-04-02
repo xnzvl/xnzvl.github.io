@@ -80,9 +80,9 @@ title: J. Nezval
 
         <div class="content__links links">
           {% for link in site.data.my.links %}
-            <div class="links__button">
-              <i class="{{ link[1].icon }}"></i>
-              <span>{{ link[0] }}</span>
+            <div class="links__button" onclick="window.open('{{ link.url }}');">
+              <i class="{{ link.icon }}"></i>
+              <span>{{ link.name }}</span>
             </div>
           {% endfor %}
         </div>
