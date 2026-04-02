@@ -131,12 +131,8 @@ html, body {
     position: relative;
     background-color: rgba(0, 0, 0, 0.1);
     padding: $units_2;
-    transition: all .2s ease-in-out;
+    transition: all .2s ease-out;
     cursor: pointer;
-  }
-
-  .links__button * {
-    z-index: 1;
   }
 
   .links__button::before {
@@ -145,7 +141,8 @@ html, body {
     inset: 0;
     background-color: rgba(0, 0, 0, 0.2);
     width: $unit_half;
-    transition: all .5s ease-in-out;
+    transition: all .25s ease-out;
+    z-index: -1;
   }
 
   .links__button:hover {
