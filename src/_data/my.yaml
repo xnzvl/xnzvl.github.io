@@ -11,21 +11,30 @@ location:
   country: Czech Republic
   city: Brno
 
-image: assets/images/notRenderable.png
+image: assets/images/profile_picture.jpeg
 
 links:
-  - name: Personal Page
-    icon: fa-solid fa-house-chimney-user
-    url: 
-  - name: LinkedIn
-    icon: fa-brands fa-linkedin
-    url: 
-  - name: GitHub
-    icon: fa-brands fa-github
-    url: https://github.com/xnzvl
-  - name: Discord
-    icon: fa-brands fa-discord
-    url: 
-  - name: Mastodon
-    icon: fa-brands fa-mastodon
-    url: https://mastodon.social/@nrvsOne
+  formal:
+    - name: Personal Page
+      icon: fa-solid fa-house-chimney-user
+      url:
+    - name: Curriculum Vitae
+      icon: fa-solid fa-file
+      url:
+    - name: LinkedIn
+      icon: fa-brands fa-linkedin
+      url:
+    - name: GitHub
+      icon: fa-brands fa-github
+      url: https://github.com/xnzvl
+    - name: GitLab
+      icon: fa-brands fa-gitlab
+      url:
+
+  personal:
+    - name: Discord
+      icon: fa-brands fa-discord
+      url:
+    - name: Mastodon
+      icon: fa-brands fa-mastodon
+      url:
