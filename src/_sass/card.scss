@@ -26,12 +26,6 @@ html, body {
   cursor: default;
 }
 
-.background {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-}
-
 .translucent {
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: $blur;
