@@ -1,0 +1,40 @@
+name: Jakub
+surname: Nezval
+birthdate: 2001-09-20
+pronouns: he/him
+
+degree: Bc.
+
+role: Software Engineering student
+organization: MUNI FI
+location:
+  country: Czech Republic
+  city: Brno
+
+image: assets/images/profile_picture.jpeg
+
+links:
+  formal:
+    - name: Personal Page
+      icon: fa-solid fa-house-chimney-user
+      url: /
+    - name: Curriculum Vitae
+      icon: fa-solid fa-id-badge
+      url: /cv
+    - name: LinkedIn
+      icon: fa-brands fa-linkedin
+      url: https://www.linkedin.com/in/jakub-nezval-829a39277/
+    - name: GitHub
+      icon: fa-brands fa-github
+      url: https://github.com/xnzvl
+    - name: GitLab
+      icon: fa-brands fa-gitlab
+      url: https://gitlab.fi.muni.cz/xnezval
+
+  personal:
+    - name: Discord
+      icon: fa-brands fa-discord
+      url:
+    - name: Mastodon
+      icon: fa-brands fa-mastodon
+      url:

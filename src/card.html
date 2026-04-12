@@ -1,0 +1,84 @@
+---
+layout: card
+title: J. Nezval
+---
+
+<script>
+  /**
+   * @param {string} birthDateString YYYY-MM-DD birthday string
+   */
+  function computeAge(birthDateString) {
+    const today = new Date();
+    const birthDate = new Date(birthDateString);
+
+    const years  = today.getFullYear() - birthDate.getFullYear();
+    const months = today.getMonth()    - birthDate.getMonth();
+    const days   = today.getDate()     - birthDate.getDate();
+
+    const had_birthday = months < 0 || (months == 0 && days < 0);
+
+    return had_birthday ? years - 1 : years;
+  }
+
+  function setAge() {
+    document.getElementById('age').innerHTML = computeAge('{{site.data.my.birthdate}}');
+  }
+
+  window.addEventListener('load', setAge);
+</script>
+
+<main class="center">
+  <div class="card google-sans-normal">
+    <div class="card__image image">
+      <div class="image__space-filler"></div>
+      <img class="image__src" src="{{ site.data.my.image }}" />
+    </div>
+
+    <div class="card__content content translucent">
+      <div class="content__title title">
+        <div class="title__primary">
+          {{ site.data.my.degree }}
+          {{ site.data.my.name }}&nbsp;{{ site.data.my.surname }}
+        </div>
+        <div class="title__secondary">
+          <span id="age">_</span>&nbsp;years, {{ site.data.my.pronouns }}
+        </div>
+      </div>
+
+      <div class="content__info-block info-block">
+        <div class="info-block__entry with-icon">
+          <i class="fa-solid fa-user"></i>
+          <span>{{ site.data.my.role }}</span>
+        </div>
+        <div class="info-block__entry with-icon">
+          <i class="fa-solid fa-building"></i>
+          {{ site.data.my.organization }}
+        </div>
+        <div class="info-block__entry with-icon">
+          <i class="fa-solid fa-location-dot"></i>
+          {{ site.data.my.location.city }}, {{ site.data.my.location.country }}
+        </div>
+      </div>
+
+      <div class="content__text elevator-pitch">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        In luctus euismod dapibus. Sed efficitur lobortis faucibus.
+        Nam finibus erat quis dictum dignissim.
+        Praesent euismod, augue quis tempus mattis, metus arcu congue magna, ac pretium lorem ante ut mi.
+        Integer eu lobortis turpis.
+        Vestibulum sit amet aliquam turpis, sit amet ultricies lorem.
+        Praesent metus justo, ornare at magna non, ornare tristique massa.
+        Etiam at enim sit amet nulla bibendum rutrum ac sit amet ex.
+      </div>
+
+      <div class="content__links links">
+        {% for link in site.data.my.links.formal %}
+          <div class="links__button with-icon" onclick="window.open('{{ link.url }}');">
+            <i class="{{ link.icon }}"></i>
+            <span>{{ link.name }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</main>
