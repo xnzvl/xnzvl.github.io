@@ -1,7 +1,6 @@
 @import "center";
 @import "font";
-
-$width: 80vw;  // TODO: make responsive
+@import "responsive_breakpoints";
 
 $unit_half: 4px;
 $unit: calc(2 * #{$unit_half});
@@ -11,7 +10,6 @@ $units_6: calc(6 * #{$unit});
 
 $blur: blur(#{$unit});
 
-$image_size: calc(32 * #{$unit});
 $image-card_overlap: $units_4;
 
 $font-size_info-block: 1.2em;
@@ -20,10 +18,28 @@ $font-size_title_secondary: 1.4em;
 $font-size_elevator_pitch: 1.1em;
 $font-size_links: 1.2em;
 
-html, body {
+:root {
+  --card_width: 95vw;
+  --image_size: 50vw;
+}
+
+body {
   margin: 0;
   width: 100vw;
   cursor: default;
+}
+
+@media (min-width: $media_xs) {
+  :root {
+    --card_width: 90vw;
+    --image_size: 256px;
+  }
+}
+
+@media (min-width: $media_s) {
+  :root {
+    --card_width: 700px;
+  }
 }
 
 .translucent {
@@ -32,8 +48,16 @@ html, body {
   // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+.with-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $unit;
+}
+
 .card {
   padding: $units_4 0;
+  width: var(--card_width);
 
   .card__image {
 
@@ -45,8 +69,6 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: $units_2;
-
-    width: $width;
   }
 }
 
@@ -58,14 +80,14 @@ html, body {
   align-items: center;
 
   .image__space-filler {
-    height: calc(#{$image_size} - #{$image-card_overlap});
+    height: calc(var(--image_size) - #{$image-card_overlap});
   }
 
   .image__src {
     position: absolute;
     z-index: 1;
-    width: $image_size;
-    height: $image_size;
+    width: var(--image_size);
+    height: var(--image_size);
   }
 }
 

@@ -38,24 +38,23 @@ title: J. Nezval
       <div class="content__title title">
         <div class="title__primary">
           {{ site.data.my.degree }}
-          {{ site.data.my.name }}
-          {{ site.data.my.surname }}
+          {{ site.data.my.name }}&nbsp;{{ site.data.my.surname }}
         </div>
         <div class="title__secondary">
-          <span id="age">_</span> years, {{ site.data.my.pronouns }}
+          <span id="age">_</span>&nbsp;years, {{ site.data.my.pronouns }}
         </div>
       </div>
 
       <div class="content__info-block info-block">
-        <div class="info-block__entry">
+        <div class="info-block__entry with-icon">
           <i class="fa-solid fa-user"></i>
-          {{ site.data.my.role }}
+          <span>{{ site.data.my.role }}</span>
         </div>
-        <div class="info-block__entry">
+        <div class="info-block__entry with-icon">
           <i class="fa-solid fa-building"></i>
           {{ site.data.my.organization }}
         </div>
-        <div class="info-block__entry">
+        <div class="info-block__entry with-icon">
           <i class="fa-solid fa-location-dot"></i>
           {{ site.data.my.location.city }}, {{ site.data.my.location.country }}
         </div>
@@ -74,7 +73,7 @@ title: J. Nezval
 
       <div class="content__links links">
         {% for link in site.data.my.links.formal %}
-          <div class="links__button" onclick="window.open('{{ link.url }}');">
+          <div class="links__button with-icon" onclick="window.open('{{ link.url }}');">
             <i class="{{ link.icon }}"></i>
             <span>{{ link.name }}</span>
           </div>
