@@ -17,19 +17,19 @@ links:
   formal:
     - name: Personal Page
       icon: fa-solid fa-house-chimney-user
-      url:
+      url: /
     - name: Curriculum Vitae
-      icon: fa-solid fa-file
-      url:
+      icon: fa-solid fa-id-badge
+      url: /cv
     - name: LinkedIn
       icon: fa-brands fa-linkedin
-      url:
+      url: https://www.linkedin.com/in/jakub-nezval-829a39277/
     - name: GitHub
       icon: fa-brands fa-github
       url: https://github.com/xnzvl
     - name: GitLab
       icon: fa-brands fa-gitlab
-      url:
+      url: https://gitlab.fi.muni.cz/xnezval
 
   personal:
     - name: Discord
