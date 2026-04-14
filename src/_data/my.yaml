@@ -20,7 +20,7 @@ links:
       url: /
     - name: Curriculum Vitae
       icon: fa-solid fa-id-badge
-      url: /cv
+      url: /file/cv.pdf
     - name: LinkedIn
       icon: fa-brands fa-linkedin
       url: https://www.linkedin.com/in/jakub-nezval-829a39277/
