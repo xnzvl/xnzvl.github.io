@@ -71,10 +71,10 @@ title: J. Nezval
         Etiam at enim sit amet nulla bibendum rutrum ac sit amet ex.
       </div>
 
-      <div class="content__links links">
+      <div class="content__links">
         {% for link in site.data.my.links.formal %}
-          <div class="links__button with-icon" onclick="window.open('{{ link.url }}');">
-            <i class="{{ link.icon }}"></i>
+          <div class="button" onclick="window.open('{{ link.url }}');">
+            <i class="button__icon {{ link.icon }}"></i>
             <span>{{ link.name }}</span>
           </div>
         {% endfor %}

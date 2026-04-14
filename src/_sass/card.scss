@@ -1,12 +1,5 @@
-@import "center";
-@import "font";
+@import "units";
 @import "responsive_breakpoints";
-
-$unit_half: 4px;
-$unit: calc(2 * #{$unit_half});
-$units_2: calc(2 * #{$unit});
-$units_4: calc(4 * #{$unit});
-$units_6: calc(6 * #{$unit});
 
 $blur: blur(#{$unit});
 
@@ -20,7 +13,7 @@ $image-card_overlap: $units_4;
   --font-size_title_secondary: 1.4em;
   --font-size_info-block:      1.1em;
   --font-size_elevator_pitch:  1.1em;
-  --font-size_links:           1.2em;
+  --font-size_button:           1.2em;
 }
 
 body {
@@ -141,40 +134,4 @@ body {
 
 .elevator-pitch {
   font-size: var(--font-size_elevator_pitch);
-}
-
-.links {
-  font-size: var(--font-size_links);
-
-  .links__button {
-    position: relative;
-    font-weight: 500;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: $units_2;
-    transition: all .2s ease-out;
-    cursor: pointer;
-  }
-
-  .links__button::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: $unit_half;
-    transition: all .25s ease-out;
-    z-index: -1;
-  }
-
-  .links__button:hover {
-    padding-left: 48px;
-    font-style: oblique;
-  }
-
-  .links__button:hover::before {
-    width: 100%;
-  }
-
-  .links__button i {
-    padding-right: $unit_half;
-  }
 }

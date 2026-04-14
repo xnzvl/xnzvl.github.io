@@ -1,0 +1,34 @@
+@import "units";
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: $unit_half;
+  transition: all .25s ease-out;
+  z-index: -1;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+.button {
+  position: relative;
+  font-size: var(--font-size_links);
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: $units_2;
+  transition: all .2s ease-out;
+  cursor: pointer;
+
+  .button__icon {
+    padding-right: $unit_half;
+  }
+}
+
+.button:hover {
+  padding-left: 48px;
+  font-style: oblique;
+}
