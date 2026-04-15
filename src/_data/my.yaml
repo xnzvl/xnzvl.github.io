@@ -17,7 +17,7 @@ links:
   formal:
     - name: Personal Page
       icon: fa-solid fa-house-chimney-user
-      url: /
+      url: /placeholder
     - name: Curriculum Vitae
       icon: fa-solid fa-id-badge
       url: /file/cv.pdf
