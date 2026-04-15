@@ -1,3 +1,4 @@
+@import "colors";
 @import "units";
 @import "responsive_breakpoints";
 
@@ -20,7 +21,10 @@ body {
   margin: 0;
   width: 100vw;
   cursor: default;
-  background-image: url("/assets/images/untitled.png");
+  background-color: #BFB7AC;
+  background-image: url("/assets/images/background.png");
+  color: $black;
+  overflow-x: hidden;
 }
 
 @media (min-width: $media_xs) {
@@ -40,9 +44,9 @@ body {
 }
 
 .translucent {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: $blur;
-  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
 .with-icon {
@@ -66,6 +70,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: $units_2;
+
+    border-left: $unit_half solid $color_primary;
   }
 }
 
@@ -91,8 +97,7 @@ body {
 .content {
   .content__title {
     padding: $unit $units_2 $unit $units_2;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $black;
   }
 
   .content__info-block {
@@ -135,4 +140,12 @@ body {
 
 .elevator-pitch {
   font-size: var(--font-size_elevator_pitch);
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
