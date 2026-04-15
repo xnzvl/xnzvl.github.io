@@ -13,13 +13,14 @@ $image-card_overlap: $units_4;
   --font-size_title_secondary: 1.4em;
   --font-size_info-block:      1.1em;
   --font-size_elevator_pitch:  1.1em;
-  --font-size_button:           1.2em;
+  --font-size_button:          1.2em;
 }
 
 body {
   margin: 0;
   width: 100vw;
   cursor: default;
+  background-image: url("/assets/images/untitled.png");
 }
 
 @media (min-width: $media_xs) {
