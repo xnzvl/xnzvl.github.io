@@ -1,15 +1,7 @@
 ---
 layout: plain
-stylesheets:
-  - href: /assets/css/styles.css
 ---
 
-<header>
-  {% include navigation.html %}
-</header>
-<main>
-  {{ content }}
-</main>
-<footer>
-  {% include footer.html %}
-</footer>
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
