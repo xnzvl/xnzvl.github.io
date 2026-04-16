@@ -21,9 +21,6 @@ body {
   margin: 0;
   width: 100vw;
   cursor: default;
-  background-color: #BFB7AC;
-  background-image: url("/assets/images/background.png");
-  color: $black;
   overflow-x: hidden;
 }
 
@@ -41,19 +38,6 @@ body {
   :root {
     --card_width: 700px;
   }
-}
-
-.translucent {
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: $blur;
-  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-}
-
-.with-icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: $unit;
 }
 
 .card {
